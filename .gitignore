@@ -1,2 +1,6 @@
 #python virtual env
 r10kdeploy-env
+
+#vscode items
+.vscode/
+py-r10k-deploy.code-workspace
