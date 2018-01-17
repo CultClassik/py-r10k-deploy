@@ -1,4 +1,4 @@
-FROM 3.6.4-alpine3.7
+FROM pypy:3-onbuild
 
 LABEL "maintainer=Chris Diehl <cultclassik@gmail.com>"
 
@@ -15,4 +15,4 @@ VOLUME /key.rsa
 
 EXPOSE 8080
 
-CMD [ "python", "./r10k-deploy.py" ]
+CMD [ "pypy3", "/app/app.py" ]
