@@ -3,7 +3,7 @@ import falcon
 import json
 
 class r10kResource:
- 
+
     def on_get(self, req, resp):
         """Handles GET requests"""
         result = {'error': 'invalid request'}
@@ -11,7 +11,7 @@ class r10kResource:
         resp.body = json.dumps(result)
 
     def on_post(self, req, resp):
-         """Handles POST requests"""
+        """Handles POST requests"""
         try:
             raw_json = req.stream.read()
         except Exception as ex:
