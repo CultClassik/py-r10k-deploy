@@ -25,7 +25,7 @@ class r10kResource:
         #    resp.body = json.dumps(result)
         #except ValueError:
         #    raise falcon.HTTPError(falcon.HTTP_400,'Invalid JSON','Could not decode the request body. The ''JSON was incorrect.')
-        os.system('ssh -o StrictHostKeyChecking=no -i /key.rsa chris@puppet "sudo r10k deploy environment -pv"')
+        os.system('ssh -o StrictHostKeyChecking=no -i /key.rsa chris@puppet.diehlabs.lan "sudo r10k deploy environment -pv"')
 
 api = falcon.API()
 api.add_route('/deploy', r10kResource())
