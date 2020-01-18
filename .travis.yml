@@ -12,7 +12,7 @@ script:
   - TAG="0.2"
   - CONT_NAME="py-r10k-deploy"
   - docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-  - docker build --build-arg ZCLASSIC_VER=$TAG -t $DOCKER_REPO/$CONT_NAME:latest .
+  - docker build --build-arg -t $DOCKER_REPO/$CONT_NAME:latest .
   - docker images
   - docker tag $DOCKER_REPO/$CONT_NAME:latest $DOCKER_REPO/$CONT_NAME:$TAG
   - docker push $DOCKER_REPO/$CONT_NAME:$TAG
